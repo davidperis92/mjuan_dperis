@@ -1,0 +1,30 @@
+@CHARSET "ISO-8859-1";
+
+.btn-primary, .btn-warning{
+	margin-top: 20px;
+	max-width: 250px;
+	width: 100%;
+	border-width: 1px!important;
+    border-color: #333;
+}
+
+form div div div{
+	display: inline-block;
+    max-width: 49%;
+    width: 100%;
+    text-align: left;
+    vertical-align: middle;
+    height: 40px;
+}
+
+#fieldsContent{
+    max-width: 450px;
+    width: 100%;
+    display: inline-block;
+}
+
+.btn-group{
+    max-width: 250px;
+    width: 100%;
+ 	margin-bottom: 20px;
+}

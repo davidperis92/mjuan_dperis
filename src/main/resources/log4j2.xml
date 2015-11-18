@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration  packages="com.Sopra.Trabajo">
+  <Appenders>
+  	<File name="FileLog" fileName="app.log">
+        <PatternLayout>
+        <pattern>%d %p %C{1.} [%t] %m%n</pattern>
+      </PatternLayout>>
+    </File>
+    <Console name="Console" target="SYSTEM_OUT">
+      <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+    </Console>
+    
+  </Appenders>
+  <Loggers>
+    <Root level="trace">
+      <AppenderRef ref="Console" level="info"/>
+      <AppenderRef ref="FileLog" level="info"/>
+    </Root>
+  </Loggers>
+</Configuration>

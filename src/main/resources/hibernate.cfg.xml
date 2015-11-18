@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration">
+<hibernate-configuration>
+	 <session-factory>
+		  <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		  <property name="hibernate.connection.url">jdbc:oracle:thin:@127.0.0.1:1521:xe</property>
+		  <property name="hibernate.connection.username">SOPRA</property>
+		  <property name="hibernate.connection.password">sopra</property>
+		  <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
+		  
+		  <property name="connection.pool_size">1</property>
+		  
+		  <property name="hibernate.current_session_context_class">thread</property>
+		  
+		  <property name="show_sql">false</property>
+		  <!-- <mapping resource="com\Sopra\Trabajo\hibernate\Empleado.xml"></mapping>
+		  <mapping resource="com\Sopra\Trabajo\hibernate\Departamento.xml"></mapping>
+		  <mapping resource="com\Sopra\Trabajo\hibernate\Rol.xml"></mapping>
+		  <mapping resource="com\Sopra\Trabajo\hibernate\Privilegio.xml"></mapping> -->
+		  <mapping class="com.Sopra.Trabajo.Model.Empleado"></mapping>
+		  <mapping class="com.Sopra.Trabajo.Model.Departamento"></mapping>
+		  <mapping class="com.Sopra.Trabajo.Model.Rol"></mapping>
+		  <mapping class="com.Sopra.Trabajo.Model.Privilegio"></mapping>
+	</session-factory>
+</hibernate-configuration>

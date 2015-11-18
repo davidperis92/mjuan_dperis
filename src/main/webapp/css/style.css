@@ -1,0 +1,50 @@
+@CHARSET "ISO-8859-1";
+
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
+
+table td:empty {
+    width: 10px;
+    border: 0px;
+}
+table tr:empty {
+    height: 10px;
+    border: 0px;
+}
+
+th{
+	text-align: left;
+    width: 33%;
+}
+
+td, th{
+	padding: 5px;
+}
+
+.h3, h3 {
+    font-size: 24px;
+    text-align: center;
+}
+
+table{
+    border-color: black!important;
+    border: 0px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+div#Screen{
+	margin-top: 50px;
+    text-align: center;
+}
+
+.btn-primary, .btn-warning{
+	max-width: 160px;
+	width: 100%;
+	border-width: 1px!important;
+    border-color: #333;
+}
+
+.btn-group{
+    max-width: 250px;
+    width: 100%;
+}

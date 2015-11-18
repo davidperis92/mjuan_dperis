@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.Sopra.Trabajo.Model">
+	<class name="Empleado" table="EMPLEADO">
+		<id name="id" column="ID">
+            <generator class="increment"/>
+        </id>
+		<property name="nombre" type="string">
+			<column name="NOMBRE" length="20" not-null="true"/>
+		</property>
+        <property name="apellidos" type="string">
+        	<column name="APELLIDOS" length="20" not-null="true"/>
+       	</property>
+        <property name="dni" type="string">
+        	<column name="DNI" length="20" not-null="true"/>
+       	</property>
+        <property name="contraseña" type="string">
+        	<column name="CONTRASEÑA" length="20" not-null="true"/>
+        </property>
+        
+       <many-to-one name="departamento" class="com.Sopra.Trabajo.Model.Departamento" fetch="select">
+            <column name="id" not-null="true" />
+        </many-to-one>
+        
+        <many-to-one name="rol" class="com.Sopra.Trabajo.Model.Rol" fetch="select" insert="false" update="false">
+            <column name="id" not-null="true" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="com.Sopra.Trabajo.Model">
+	<class name="Rol" table="ROL">
+		<id name="id" column="ID">
+            <generator class="increment"/>
+        </id>
+		<property name="nombre" type="string">
+			<column name="NOMBRE" length="20" not-null="true"/>
+		</property>	
+		
+		<set name="empleado" table="EMPLEADO" 
+				inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id" not-null="true"  />
+            </key>
+            <one-to-many class="com.Sopra.Trabajo.Model.Empleado" />
+        </set>
+
+	
+		<set name="privilegio" table="ROL_PRIV" inverse="true" fetch="select"  >
+			<key>
+				<column name="ROL" not-null="true"/>
+			</key>
+			<many-to-many class="com.Sopra.Trabajo.Model.Privilegio">
+				<column name="PRIVILEGIO" not-null="true"></column>
+			</many-to-many>
+		</set>
+    </class>
+
+
+</hibernate-mapping>

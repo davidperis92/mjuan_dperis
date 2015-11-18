@@ -1,0 +1,8 @@
+@CHARSET "ISO-8859-1";
+
+.btn-primary, .btn-warning, .btn-danger{
+	max-width: 200px;
+	width: 100%;
+	border-width: 1px!important;
+    border-color: #333;
+}

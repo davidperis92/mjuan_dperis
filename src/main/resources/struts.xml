@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+   "http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.devMode" value="false"/>
+	<package name="default" namespace="/" extends="struts-default, json-default">
+		
+		<!-- ROL -->	
+		<action name="Rol*Action" method="{1}" class="com.Sopra.Trabajo.Actions.RolAction">
+			<result name="success" type="json"></result>
+			<result name="error" type="json"></result>
+		</action>
+
+		<!-- DEPARTAMENTO -->	
+		<action name="Dept*Action" method="{1}" class="com.Sopra.Trabajo.Actions.DeptAction">
+			<result name="success" type="json"></result>
+			<result name="error" type="json"></result>
+		</action>
+		<!-- USUARIOS -->	
+		<action name="User*Action" method="{1}" class="com.Sopra.Trabajo.Actions.UserAction">
+			<result name="success" type="json"></result>
+			<result name="error" type="json"></result>
+		</action>
+
+
+		<action name="LoginAction" class="com.Sopra.Trabajo.Actions.LoginAction">
+			<result name="success" type="json"></result>
+			<result name="error" type="json"></result>
+		</action>
+		
+		<action name="LogoutAction" method="logout" class="com.Sopra.Trabajo.Actions.LoginAction">
+			<result name="success" type="json"></result>
+			<result name="error" type="json"></result>
+		</action>
+		
+		<action name="BackMenu" method="back" class="com.Sopra.Trabajo.Actions.RedirectAction">					
+		</action>
+	
+		<!-- Acciones de forward -->
+		<action name="redirect" class="com.Sopra.Trabajo.Actions.RedirectAction">
+			<result name="index">index.jsp</result>
+			<result name="menu">menu.jsp</result>
+			
+			<result name="newUser">newUser.jsp</result>
+			<result name="remUser">remUser.jsp</result>
+			<result name="modUser">modUser.jsp</result>
+			
+			<result name="newRol">newRol.jsp</result>
+			<result name="remRol">remRol.jsp</result>
+			<result name="modRol">modRol.jsp</result>
+			
+			<result name="newDept">newDept.jsp</result>
+			<result name="remDept">remDept.jsp</result>
+			<result name="modDept">modDept.jsp</result>
+			
+			<result name="exito">exito.jsp</result>
+		</action>
+	</package>
+</struts>
